@@ -1,0 +1,5 @@
+# AdvancedPS
+
+```@autodocs
+Modules = [AdvancedPS]
+```
