@@ -56,11 +56,12 @@ makedocs(;
     format=Documenter.HTML(),
     modules=[AdvancedPS],
     pages=[
-        "Home" => "index.md", 
-        "api.md", 
-        "Examples" => map(filter!(filename -> endswith(filename, ".md"), readdir(EXAMPLES_OUT))) do x
-            return joinpath("examples", x)
-        end
+        "Home" => "index.md",
+        "api.md",
+        "Examples" =>
+            map(filter!(filename -> endswith(filename, ".md"), readdir(EXAMPLES_OUT))) do x
+                return joinpath("examples", x)
+            end,
     ],
     checkdocs=:exports,
     doctestfilters=[

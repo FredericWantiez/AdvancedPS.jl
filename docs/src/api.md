@@ -4,7 +4,7 @@
 
 ## Resampling
 
-## Random
+## RNG
 
 ```@autodocs
 Modules = [AdvancedPS]
