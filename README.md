@@ -10,16 +10,10 @@ AdvancedPS is part of the [Turing](https://turing.ml/stable/) ecosystem.
 
 ### Installation
 
-Inside the julia repl
+Inside the julia REPL
 ```julia
 julia>] add AdvancedPS
 ```
-
-### Interface
-
-AdvancedPS implements the following samplers:
-- Particle Gibbs
-- SMC
 
 ### Examples
 

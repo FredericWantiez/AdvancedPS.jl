@@ -58,9 +58,9 @@ To solve these two issues AdvancedPS uses counter-based RNG introduced in [^1] a
 [StochasticDifferentialEquations](https://github.com/SciML/StochasticDiffEq.jl) or [JAX](https://jax.readthedocs.io/en/latest/jax-101/05-random-numbers.html?highlight=random)
 for other implementations. 
 
-Under the hood AdvancedPS is using [Random123](https://github.com/JuliaRandom/Random123.jl) for the counter-based generators.
-Using counter-based RNG allows us to split generators which creates two new independent random streams. These generators are also wrapped in a [`AdvancedPS.TracedRNG`](@ref) type. 
-The `TracedRNG` keeps track of the keys generated every `split` and can be reset to replay random streams.
+Under the hood AdvancedPS is using [Random123](https://github.com/JuliaRandom/Random123.jl) for the generators.
+Using counter-based RNG allows us to split generators thus creating new independent random streams. These generators are also wrapped in a [`AdvancedPS.TracedRNG`](@ref) type. 
+The `TracedRNG` keeps track of the keys generated at every `split` and can be reset to replay random streams.
 
 
 ```@docs
