@@ -1,4 +1,4 @@
-# AdvancedPS: Particle Filters for Julia
+# AdvancedPS: Particle Samplers for Julia
 
 This is a lightweight package that implements particle based Monte Carlo algorithms for the [Turing](https://turing.ml/stable/) ecosystem.
 

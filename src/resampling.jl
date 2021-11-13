@@ -7,6 +7,12 @@
 #  - http://people.isy.liu.se/rt/schon/Publications/HolSG2006.pdf
 # Code adapted from: http://uk.mathworks.com/matlabcentral/fileexchange/24968-resampling-methods-for-particle-filtering
 
+"""
+    ResampleWithESSThreshold{R,T<:Real}
+
+Perform resampling using `R` if the effective sample size is below `T`.
+By default we use `resample_systematic` with a threshold of 0.5
+"""
 struct ResampleWithESSThreshold{R,T<:Real}
     resampler::R
     threshold::T

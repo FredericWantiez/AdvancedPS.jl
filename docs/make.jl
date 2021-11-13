@@ -58,10 +58,13 @@ makedocs(;
     pages=[
         "Home" => "index.md",
         "api.md",
-        "Examples" =>
-            map(filter!(filename -> endswith(filename, ".md"), readdir(EXAMPLES_OUT))) do x
-                return joinpath("examples", x)
-            end,
+        "Examples" => [
+            "example.md",
+            map(
+                (x) -> joinpath("examples", x),
+                filter!(filename -> endswith(filename, ".md"), readdir(EXAMPLES_OUT)),
+            )...,
+        ],
     ],
     checkdocs=:exports,
     doctestfilters=[
